@@ -5,7 +5,7 @@ import Global from '../Global';
 export default class EmpleadosDepartamentos extends Component {
 
     selectDepartamento = React.createRef();
-    urlEmpleado = Global.urlApiEmpleados
+    urlEmpleado = Global.urlApiEmpleados;
     urlDepartamentos=Global.urlApiDepartamento;
 
     findEmpleados = (event) => {
