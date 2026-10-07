@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 
 import axios from 'axios';
+import Global from '../Global';
 
 export default class ComponentServiceSuppliers extends Component {
 
-    url = "https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers"
 
     cajaID = React.createRef();
 
     findSupplier = (event) => {
 
         event.preventDefault();
+        let request = "Suppliers";
 
         let id = parseInt(this.cajaID.current.value);
 
         //CARGAMOS LOS DATOS DE SUPPLIERS DE API 
 
-        axios.get(this.url).then((response) => {
+        axios.get(Global.urlNorthwind + request).then((response) => {
 
             //BUSCAMOS DENTRO DEL STATE EL DATO CON ID 
 
@@ -47,8 +48,9 @@ export default class ComponentServiceSuppliers extends Component {
     loadSuppliers = () => {
 
         console.log("antes");
+        let request = "Suppliers";
 
-        axios.get(this.url).then((response) => {
+        axios.get(Global.urlNorthwind + request).then((response) => {
 
             console.log("Leyendo...");
 
