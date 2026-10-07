@@ -4,12 +4,13 @@ import Global from '../Global';
 
 export default class EmpleadosDepartamentos extends Component {
 
-    cajaDepartamento = React.createRef();
+    selectDepartamento = React.createRef();
     urlEmpleado = Global.urlApiEmpleados
+    urlDepartamentos=Global.urlApiDepartamento;
 
     findEmpleados = (event) => {
         event.preventDefault();
-        let idDepartamento = this.cajaDepartamento.current.value;
+        let idDepartamento = this.selectDepartamento.current.value;
         let request = "api/empleados/empleadosdepartamento/" + idDepartamento;
 
         axios.get(this.urlEmpleado + request).then((response) => {
@@ -19,8 +20,27 @@ export default class EmpleadosDepartamentos extends Component {
             })
         })
     }
+
+    loadDepartamentos=()=>{
+        let request="webresources/departamentos";
+        axios.get(this.urlDepartamentos + request).then((response)=>{
+            console.log("Leyendo departamentos")
+            this.setState({
+                departamentos: response.data
+            })
+        })
+    }
+
+    componentDidMount=()=>{
+        this.loadDepartamentos();
+    }
+
+
+
+
     state = {
         empleados: [],
+        departamentos:[]
     }
 
 
@@ -32,7 +52,15 @@ export default class EmpleadosDepartamentos extends Component {
 
                 <form>
                     <label>Introduzca id de departamento: </label>
-                    <input type='text' ref={this.cajaDepartamento} />
+                    <select ref={this.selectDepartamento}>
+                        {
+                            this.state.departamentos.map((dept,index)=>{
+                                return (<option key={index} value={dept.numero}>
+                                    {dept.nombre}
+                                </option>)
+                            })
+                        }
+                    </select>
                     <button onClick={this.findEmpleados}>
                         Buscar empleados
                     </button>
