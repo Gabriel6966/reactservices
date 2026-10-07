@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ComponentServiceCustomers from './components/ComponentServiceCustomers';
+import ComponentServiceSuppliers from './components/ComponentServiceSuppliers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ComponentServiceCustomers/>
+    <ComponentServiceSuppliers/>
   </React.StrictMode>
 );
 
