@@ -7,11 +7,12 @@ import ComponentServiceCustomers from './components/ComponentServiceCustomers';
 import ComponentServiceSuppliers from './components/ComponentServiceSuppliers';
 import EmpleadosDepartamentos from './components/EmpleadosDepartamentos';
 import EmpleadosOficios from './components/EmpleadosOficios';
+import DepartamentosComponent from './components/maestrodetalle/DepartamentosComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <EmpleadosOficios/>
+    <DepartamentosComponent/>
   </React.StrictMode>
 );
 
