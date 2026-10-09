@@ -8,11 +8,13 @@ import ComponentServiceSuppliers from './components/ComponentServiceSuppliers';
 import EmpleadosDepartamentos from './components/EmpleadosDepartamentos';
 import EmpleadosOficios from './components/EmpleadosOficios';
 import DepartamentosComponent from './components/maestrodetalle/DepartamentosComponent';
+import CocheDetalles from './components/maestrodetalle2/CocheDetalles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <DepartamentosComponent/>
+    <CocheDetalles/>
   </React.StrictMode>
 );
 
