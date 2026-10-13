@@ -9,7 +9,13 @@ export default class MenuComponent extends Component {
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/tabla">Tabla Multiplicar</a>
+                        <a href="/tabla/21">Tabla Multiplicar</a>
+                    </li>
+                    <li>
+                        <a href="/tabla/14">Tabla Multiplicar</a>
+                    </li>
+                    <li>
+                        <a href="/tabla/7">Tabla Multiplicar</a>
                     </li>
                 </ul>
             </div>
