@@ -11,11 +11,12 @@ import DepartamentosComponent from './components/maestrodetalle/DepartamentosCom
 import CocheDetalles from './components/maestrodetalle2/CocheDetalles';
 import MenuComponent from './components/MenuComponent';
 import Router from './Router';
+import MenuCollatz from './components/practicacollatz/MenuCollatz';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div style={{margin: "auto", width:"500px"}}>
-    <MenuComponent/>
+    <MenuCollatz/>
     <Router/>
   </div>
 );
