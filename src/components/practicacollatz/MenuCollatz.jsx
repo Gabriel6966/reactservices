@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default class MenuCollatz extends Component {
     render() {
@@ -6,16 +7,16 @@ export default class MenuCollatz extends Component {
             <div>
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <NavLink to ="/">Home</NavLink>
                     </li>
                     <li>
-                        <a href="/collatz/15">Tabla Collatz</a>
+                        <NavLink to="/collatz/15">Tabla Collatz</NavLink>
                     </li>
                     <li>
-                        <a href="/collatz/3">Tabla Collatz</a>
+                        <NavLink to="/collatz/3">Tabla Collatz</NavLink>
                     </li>
                     <li>
-                        <a href="/collatz/10">Tabla Collatz</a>
+                        <NavLink to="/collatz/10">Tabla Collatz</NavLink>
                     </li>
                 </ul>
             </div>

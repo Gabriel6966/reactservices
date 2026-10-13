@@ -1,4 +1,4 @@
-import  { Component } from 'react'
+import { Component } from 'react'
 
 export default class Collatz extends Component {
 
@@ -27,6 +27,12 @@ export default class Collatz extends Component {
         this.generarTabla();
     }
 
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.numero != this.props.numero) {
+            this.generarTabla();
+        }
+    }
+
 
 
     render() {
@@ -35,11 +41,11 @@ export default class Collatz extends Component {
                 <h1>Collatz Conjecture</h1>
 
                 <h3 style={{ color: "fuchsia" }}>
-                    <ul>
+                    <ul className="list-group">
                         {
                             this.state.tabla.map((num, index) => {
                                 return (
-                                    <li key={index}>
+                                    <li className="list-group-item" key={index}>
                                         {num}
                                     </li>)
                             })

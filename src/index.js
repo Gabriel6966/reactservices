@@ -12,11 +12,14 @@ import CocheDetalles from './components/maestrodetalle2/CocheDetalles';
 import MenuComponent from './components/MenuComponent';
 import Router from './Router';
 import MenuCollatz from './components/practicacollatz/MenuCollatz';
+import "bootstrap/dist/css/bootstrap.min.css";
+import $ from "jquery";
+import Popper from "popper.js";
+import "bootstrap/dist/js/bootstrap.bundle";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div style={{margin: "auto", width:"500px"}}>
-    <MenuCollatz/>
     <Router/>
   </div>
 );

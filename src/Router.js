@@ -19,6 +19,7 @@ export default class Router extends Component {
         }
         return (
             <BrowserRouter>
+            <MenuCollatz/>
                 <Routes>
                     <Route path="/" element={<HomeComponent/>}/>
                     <Route path="/tabla/:minumero" element={<TablaMultiplicarElement/>}/>

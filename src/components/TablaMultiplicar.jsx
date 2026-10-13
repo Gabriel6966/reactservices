@@ -30,10 +30,10 @@ export default class TablaMultiplicar extends Component {
 
                 <h3 style={{ color: "blue" }}>
 
-                    <ul>
+                    <ul className="list-group">
                         {
                             this.state.tabla.map((num, index) => {
-                                return (<li key={index}>
+                                return (<li className="list-group-item" key={index}>
                                     {num}
                                 </li>)
                                 
