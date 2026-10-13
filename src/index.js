@@ -9,13 +9,15 @@ import EmpleadosDepartamentos from './components/EmpleadosDepartamentos';
 import EmpleadosOficios from './components/EmpleadosOficios';
 import DepartamentosComponent from './components/maestrodetalle/DepartamentosComponent';
 import CocheDetalles from './components/maestrodetalle2/CocheDetalles';
+import MenuComponent from './components/MenuComponent';
+import Router from './Router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <DepartamentosComponent/>
-    <CocheDetalles/>
-  </React.StrictMode>
+  <div style={{margin: "auto", width:"50px"}}>
+    <MenuComponent/>
+    <Router/>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
